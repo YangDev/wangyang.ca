@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="kaoshi">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1, 
+		maximum-scale=1.0" name='viewport' />
+	<link media="screen and (max-width:640px)" rel="stylesheet" type="text/css" href="/css/kaoshi-phone.css">
+	<link media="screen and (min-width:640px)" rel="stylesheet" type="text/css" href="/css/kaoshi.css">
+</head>
+<body ng-controller="kaoshiController">
+	<script type="text/javascript" src="/js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="/js/tiKu.js"></script>
+	<script type="text/javascript" src="/js/controller/kaoshi-controller.js"></script>
+	<div class="header">
+		<div class="headerButton" ng-click="showAll()">答案</div>
+		<div class="headerButton" ng-click="showMarks()">分数</div>
+		<div class="headerResult">{{numberOfCorrect}} / {{numberOfAnswered}} = {{marks}}%</div>
+	</div>
+	<div class="container" ng-class="{blackOut: show}">
+		<div class="tiFrame" ng-repeat = "item in items">
+			<div class="des" ng-class="{whiteOut: show}">{{item.id}}. {{item.des}}
+			</div>
+			<div class="answer" ng-repeat="a in item.answer" ng-click="select($index, item.id)" 
+			ng-class="{active: selected[item.id]===$index, whiteOut: (show && showAnswer($index, item.a, item.id))}"> {{a}}
+			</div>
+		</div>
+	</div>
+
+
+	
+
+
+</body>
+</html>

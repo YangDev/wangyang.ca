@@ -1,0 +1,66 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.answer{
+	width: 100%;
+}
+
+.answer:hover{
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+}
+
+.des{
+	margin-bottom: 10px;
+}
+
+.tiFrame{
+	border-bottom: 1px solid #eee;
+	padding: 10px;
+}
+
+.active{
+	background-color: purple;
+	color: white;
+}
+
+.header{
+	padding: 0px 10px;
+	width: 100%;
+	background-color: #bbb;
+	color: white;
+	position: fixed;
+	z-index: 100;
+	box-shadow:-1px 2px 4px #888888;
+}
+
+.headerButton{
+	display: inline-block;
+	padding: 0px 10px;
+	background-color: purple;
+	cursor: pointer;
+}
+
+.headerResult{
+	display: inline-block;
+	padding: 0px 10px;
+	cursor: pointer;
+	color: green;
+}
+.container{
+	margin-top: 20px;
+	position: absolute;
+}
+
+.blackOut{
+	background-color: black;
+}
+.whiteOut{
+	color: white;
+}
+
+.circle{
+	color:white;
+}

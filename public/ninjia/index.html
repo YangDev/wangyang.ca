@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function assert (assertion, message) {
+		if (assertion === true) {
+			console.log(message);
+		}
+	};
+
+	var store = {
+		nextId: 1,
+
+		cache: {},
+
+		add: function(fn) {
+			if (!fn.id) {
+				fn.id = store.nextId++;
+				return !!(store.cache[fn.id] = fn);
+			}
+		}
+	};
+
+	function ninja() {};
+
+	assert(store.add(ninja),
+		"function was safely added.");
+	assert(!store.add(ninja),
+		"but it was only added once");
+
+	function isPrime(value) {
+		if (!isPrime.answers) {
+			isPrime.answers = {};
+		}
+
+		if (isPrime.answers[value] != null) {
+			return isPrime.answers[value];
+		}
+
+		var prime = value != 1;
+
+		for (var i = 2; i < value; i++) {
+			if (value % i == 0) {
+				prime = false;
+				break;
+			}
+		}
+
+		return isPrime.answers[value] = prime;
+	}
+
+	assert(isPrime(5), "5 is prime");
+	assert(isPrime.answers[5], "the answer was cached");
+
+	function smallest(array) {
+		return Math.min.apply(Math, array);
+	}
+
+	function biggest(array) {
+		return Math.max.apply(Math, array);
+	}
+
+	assert(smallest([0, 1, 2, 3, 4, 5]) == 0, "found the smallest value");
+	assert(biggest([0, 1, 2, 3, 4, 5]) == 5, "found the bigg
+
+		est value");
+
+	function multiMax(multi) {
+		return multi * Math.max.apply(Math, Array.prototype.slice.call(arguments, 1));
+	}
+
+	assert(multiMax(3, 1, 2, 3) == 9, "3*3=9 (first arg, by largest.)");
+
+</script>
+</body>
+</html>

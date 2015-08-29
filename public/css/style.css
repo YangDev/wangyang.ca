@@ -1,8 +1,440 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body, html {
+	margin: 0;
 }
 
 a {
   color: #00B7FF;
+}
+
+/*
+
+******************* state bar ********************
+ 
+*/
+
+.stateBar{
+	height: 35px;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #eee;
+	width: 100%;
+	font-size: 12px;
+}
+
+.login {
+	position: relative;
+	float: right;
+}
+
+#loginMenu{
+	background-color: #f5f5f5;
+	border: 1px solid #eaeaea;
+	position: absolute;
+	bottom: -100px;
+	left: -120px;
+	height: 100px;
+	display: none;
+	box-shadow: -3px 3px 5px #888888;
+}
+
+.login:hover #loginMenu{
+	display: block;
+
+}
+
+.register {
+	position: relative;
+	float: right;
+	margin-right: 30px;
+}
+
+#registerMenu{
+	border: 1px solid #eaeaea;
+	background-color: #f5f5f5;
+	position: absolute;
+	bottom: -150px;
+	left: -130px;
+	height: 150px;
+	display: none;
+	box-shadow: -3px 3px 5px #888888;
+}
+
+.register:hover #registerMenu{
+	display: block;
+}
+
+.register:active #registerMenu{
+	display: block;
+}
+/*
+
+******************* header1 *************************
+
+*/
+.header1 {
+	height: 65px;
+	width: 1100px;
+	margin: 0 auto 0 auto;
+	padding-top: 0px;
+}
+
+.header1 img {
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.search {
+	display: inline-block;
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+	height: 35px;
+	border: 1px solid #f82800;
+}
+.search input {
+	display: inline-block;
+	height: 28px;
+	width: 372px;
+	float: left;
+	border: 0px;
+}
+
+.search input:focus {
+	outline: 0;
+}
+
+.search div {
+	display: inline-block;
+	height: 100%;
+	width: 80px;
+	float: left;
+	background-color: #f82800;
+	color: white;
+	text-align: center;
+	padding-top: 0px;
+}
+
+.search p{
+	margin-top: 6px;
+	font-weight:bold;
+}
+
+
+/*
+
+******************************* header2 *************************
+
+*/
+
+.header2 {
+	
+	width: 100%;
+	height: 35px;
+
+}
+
+.header2 li{
+	display: inline-block;
+	background-color: red;
+	padding: 9px;
+	margin: 0px;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+
+
+
+.a2 {
+	margin: 10px;
+	position: fixed;
+	top: 71px;
+}
+
+
+.wrapper {
+    position: relative;
+    height: 35px; 
+    display: inline-block;
+    color: black;
+    float: left;
+    font-weight:bold;
+    background-image: linear-gradient(#f56293 100%,  #f56293);
+    background-repeat: no-repeat;
+    background-size: 100% 0px;
+    background-position: bottom;
+    transition: 0.2s;
+}
+
+.wrapper p {
+	margin: 8px 10px 10px 10px;
+}
+
+.wrapper:hover {
+    transition: 0.2s;
+    background-size: 100% 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#slideMenu {
+	width: 100%;
+	background-color: #f56293;
+	color: white;
+	position: absolute;
+}
+
+.m{
+	padding: 10px;
+	padding-left: 30px;
+	font-size: 12px;
+}
+#rapper {
+    position: relative;
+    float: left;
+    margin-left: 100px;
+}
+
+#slide {
+    position: absolute;
+    bottom: -50px;
+    height: 50px;
+    background:  #f56293;
+    /*transition: 1s;
+    display: none;*/
+    color: white;
+}
+
+#rapper:hover #slide {
+    /*transition: 1s;*/
+    display: flex;
+}
+
+/*
+****************************sub menu******************************
+*/
+.submenu{
+	height: 100px;
+	width: 300px;
+	display: inline-block;
+}
+
+.submenu:hover{
+	background-color: white;
+	color: #f56293;
+}
+
+.submenu a{
+	margin: 10px;
+}
+
+/*
+
+************************** content *************************
+
+*/
+
+.item {
+	width: 180px;
+	height: 320px;
+	border: 1px solid rgb(230, 230, 230);
+	margin: 20px 20px 0 0;
+	display: inline-block;
+	float: left;
+}
+
+.item:hover {
+	border: 1px solid #f82800;
+}
+
+.des {
+	font-size: 12px;
+	margin-top: 5px;
+	overflow: hidden;
+	padding: 5px;
+	height: 25px;
+}
+
+.price {
+	font-size: 20px;
+	color: red;
+}
+
+.grey {
+	color: grey;
+	font-size: 12px;
+	margin: 0;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.line {
+	margin-top: 5px;
+	display: block;
+	height: 20px;
+	padding: 5px;
+}
+
+.unitPrice {
+	font-size: 12px;
+}
+
+.content {
+	border-top: 2px solid #f56293;
+
+}
+
+/*
+
+************************ detail ***************************
+*/
+.detailContainer {
+	border: 1px solid rgb(230, 230, 230);
+	height: 500px;
+	padding: 20px;
+	margin-top: 10px;
+	display: flex;
+	font-size: 12px;
+}
+
+.detailLeft {
+	flex:  0 0 400px;
+	height: 500px;
+	background-color: yellow;
+	display: inline-block;
+	margin-right: 20px;
+	float: left;
+}
+
+.detailRight {
+	flex:  1 1 0px;
+	height: 500px;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+}
+
+.pic {
+	height: 400px;
+	width: 400px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.detailPrice {
+	margin-top: 10px;
+	background-color: #fff2e8;
+	padding: 10px;
+	height: 88px;
+	width: 100%;
+	padding: 10px;
+	color: #6c6c6c;
+}
+
+
+
+.a{
+	height: 50%;
+	width: 100%;
+
+	float: left;
+}
+
+.detailNumber {
+	padding: 10px;
+}
+
+.detailSend {
+	border-bottom: 1px dotted rgb(230, 230, 230);
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	color: #6c6c6c;
+}
+
+.detailButton {
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.detailDes {
+	margin-top: 10px;
+	font-size: 12px;
+	color: #6C6C6C;
+}
+
+.detailTitle {
+	font-size: 16px;
+	color: #3C3C3C;
+	font-weight: bold;
+}
+
+.btn1 {
+	padding: 10px 30px;
+	border: 1px solid #F0CAB6;
+	background-color: #FFD9BC;
+	color: #E5511D;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.btn2 {
+	padding: 10px 30px;
+	border: 1px solid #F40;
+	background-color: #F40;
+	color: white;
+	cursor: pointer;
+}
+
+.r{
+	width: 60px;
+	display: inline-block;
+	color: #6C6C6C;
+}
+
+.counter{
+	width: 120px;
+	height: 30px;
+	display: inline-block;
+	position: relative;
+}
+
+.sign{
+	background-color: #ededed;
+	display: inline-block;
+	width: 28px;
+	height: 100%;
+	border: 1px solid #ccc;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.signMiddle{
+	height: 100%;
+	width: 60px;
+	float: left;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font-size: 22px;
+}
+/*    common   */
+
+.active{
+	background-color: #f56293;
+	color: white;
+}
+
+.container {
+	border-top: 0px solid #f56293;
+	margin: 0 auto;
+	width: 100%;
 }

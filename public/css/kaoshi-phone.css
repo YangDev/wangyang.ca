@@ -1,0 +1,65 @@
+body{
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+}
+.tiFrame{
+
+	padding: 10px; 
+}
+.des{
+	margin-bottom: 10px;
+}
+
+.answer{
+
+}
+
+.tiFrame{
+	border-bottom: 1px solid #eee;
+}
+
+.active{
+	background-color: purple;
+	color: white;
+}
+
+.header{
+	padding: 0px 10px;
+	width: 100%;
+	background-color: #bbb;
+	color: white;
+	position: fixed;
+	z-index: 100;
+	box-shadow:-1px 2px 4px #888888;
+}
+
+.headerButton{
+	display: inline-block;
+	padding: 0px 10px;
+	background-color: purple;
+	cursor: pointer;
+	font-size: 25px;
+}
+.container{
+	margin-top: 26px;
+	position: absolute;
+	z-index: -1;
+}
+.blackOut{
+	background-color: black;
+}
+.whiteOut{
+	color: white;
+}
+
+.circle{
+	color:white;
+}
+
+.headerResult{
+	display: inline-block;
+	padding: 0px 10px;
+	cursor: pointer;
+	color: green;
+}

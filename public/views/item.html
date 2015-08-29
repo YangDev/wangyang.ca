@@ -1,0 +1,19 @@
+
+<div class="item" ng-repeat="item in items">
+	<a href="#detail"><img src="img/{{item.img}}" /></a>
+	<div class="line">
+		<div class="price left">¥{{item.price}}</div><div class="grey right">{{item.sold}}人收货</div>
+	</div>
+	<div class="des">
+		<a href="#detail">{{item.description}}</a>
+	</div>
+	<div class="line">
+		<div class="grey left">{{item.seller}}</div><div class="grey right">{{item.sellerOrigin}}</div>
+	</div>
+	<div class="line">
+		<div class="unitPrice"><b>{{item.price / item.volume * 500}}元</b>/500g</div>
+	</div>
+</div>
+		
+
+		

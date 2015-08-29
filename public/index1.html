@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="/js/lib/angular.min.js"></script>
+	<script src="/js/lib/angular-route.min.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="/js/route.js"></script>
+	<script src="/js/controller/item-controller.js"></script>
+	<script src="/js/controller/detail-controller.js"></script>
+	<script src="/js/controller/panel-controller.js"></script>
+</head>
+<body ng-controller="panelController">
+	<div class="stateBar">
+		<div class="container">
+			<div class="login" ng-show="!loginCheck()">亲，请登录
+				<div id="loginMenu">
+					<div >用户名</div>
+					<input ng-model="user.name">
+					<div >密码</div>
+					<input ng-model="user.pass">
+					<button ng-click="login(user.name, user.pass)">ok</button>
+				</div>
+			</div>
+			<div class="login" ng-show="loginCheck()">欢迎{{user.name}}
+			</div>
+			<div class="register">免费注册
+				<div id="registerMenu">
+					<div >用户名</div>
+					<input ng-model="reg.name">
+					<div >密码</div>
+					<input ng-model="reg.pass">
+					<div >密码</div>
+					<input>
+					<button ng-click="register(reg.name, reg.pass)">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header1 container">
+		<img src="img/0.png">
+		<div class="search">
+			<input>
+			<div><p>搜索<p></div>
+		</div>
+	</div>
+	<div class="header2" >
+		<div class="container" ng-init="tab=-1">
+			<a href="#item" id="menuButton" ng-click="tab=0">
+				<div class="wrapper" ng-class="{active: tab===0}">
+					<p>首页</p>
+				</div>
+			</a>
+	    	<a href="#item" ng-click="tab=1">
+	    		<div class="wrapper" ng-class="{active: tab===1}">
+	    			<p>海外直邮</p>
+	    		</div>
+	    	</a>
+			<a href="#item" ng-click="tab=2">
+				<div class="wrapper" ng-class="{active: tab===2}">
+					<p>孕产妇必备</p>
+				</div>
+			</a>
+			<a href="#item" ng-click="tab=3">
+				<div class="wrapper" ng-class="{active: tab===3}">
+					<p>婴童用品</p>
+				</div>
+			</a>
+			<a href="#item" ng-click="tab=4">
+				<div class="wrapper" ng-class="{active: tab===4}">
+					<p>育儿经</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div id="slideMenu"  ng-show="show()">
+		<div class="container m">
+			<div class="submenu">
+				<p>全阶段</p>
+				<a href="#item">童装</a><a>童鞋</a><a>婴儿奶粉</a>
+				<a>新生儿礼盒</a><a>玩具</a><a>纸尿裤</a>
+			</div>
+			<div class="submenu">
+				<p>孕期</p>
+				<a>叶酸</a><a>防辐射</a><a>婴儿奶粉</a>
+				<a>新生儿礼盒</a><a>玩具</a><a>纸尿裤</a>
+			</div>
+		</div>
+	</div>
+	<div class="content"><div class="container">
+	<div ng-view></div></div>
+	</div>
+</body>
+</html>

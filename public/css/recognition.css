@@ -14,6 +14,7 @@ html, body{
 	background-color:white;
 	display:block;
 	box-shadow:-3px 3px 4px #888888;
+	margin-top: 30px;
 }
 #image{
 	display:none;
@@ -40,6 +41,7 @@ html, body{
 	text-align: center;
 	padding: 10px;
 	cursor:pointer;
+	float: left;
 }
 .smallButton:hover{
 	background-color:rgb(221,221,221);
@@ -56,10 +58,11 @@ html, body{
 }
 
 .input{
-	padding-top: 0px;
-	height:38px;
+	float: left;
+	height:32px;
 	width: 60px;
 	font-size: 30px;
+	margin-right: 5px;
 }
 .text{
 	display: inline-block;

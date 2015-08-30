@@ -10,7 +10,7 @@
 </head>
 <body ng-controller="pageController">
 	<div class="container">
-		<div class="buttonContainer" style="display:none;">
+		<!--<div class="buttonContainer" style="display:none;">
 			<div ng-click="setModeLearn()" ng-class="{smallButton:true, active:tab1 === 1}">学习模式</div>
 			<div ng-click="setModeTrain()" ng-class="{smallButton:true, active:tab1 === 2}">识别模式</div>
 		</div>
@@ -20,18 +20,18 @@
 		</div>
 		
 		
-	<!--
+	
 		<div class="buttonContainer long">
 			<div class="smallButton" ng-click="recognize()" >认字</div>
 			<div class="smallButton" ng-click="learn()" >学习</div>
 			<div class="smallButton" ng-click="add()" >添加</div>
 		</div>
 	-->
-	<h1 style="height:100px;width:900px;">{{sample}}</h1>
-		<div style="height:100px;width:900px;">
+	<h1 style="width:900px;">{{sample}}</h1>
+		<div style="width:900px;">
 			
 		<div class="buttonContainer long" ng-show="mode==2">
-			<h4 class="text">This letter is not included in the libiary, please input this letter</h4>
+			<h4 class="text" style="width:600px;">This letter is not included in the libiary, please input this letter below:</h4>
 			<input class="input" ng-model="inputLabel"></input>
 			<div class="smallButton blueBackground" ng-click="addNewSample()" >Submit</div>
 		</div>

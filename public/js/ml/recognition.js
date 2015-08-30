@@ -64,7 +64,7 @@ angular.module("myApp", []).controller("pageController", function ($scope, $http
 			sampleLabel.push($scope.inputLabel);
 			if (labels.indexOf($scope.inputLabel) === -1) {
 				addLabel($scope.inputLabel);
-				$http.post('/weight', {label: $scope.inputLabel, weight: WEIGHTS[WEIGHTS.length - 1]});
+				//$http.post('/weight', {label: $scope.inputLabel, weight: WEIGHTS[WEIGHTS.length - 1]});
 			}
 			$scope.learn();
 			$scope.sample += $scope.inputLabel;
@@ -152,7 +152,7 @@ angular.module("myApp", []).controller("pageController", function ($scope, $http
 
 	var addSample = function (array, sample, label) {
 		array.push({data: sample, label:label});
-		$http.post('/sample', {data: sample, label:label});
+		//$http.post('/sample', {data: sample, label:label});
 	};
 
 	var sigmoidGradient = function (a) {
@@ -404,7 +404,7 @@ angular.module("myApp", []).controller("pageController", function ($scope, $http
 	});
 
 	cvs.addEventListener('mousemove', function(e){
-		console.log(cvs);
+		//console.log(cvs);
 		e.preventDefault();
 		if (down === 1) {
 			endDraw(e, ctx, 1);

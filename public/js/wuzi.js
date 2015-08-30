@@ -19,8 +19,6 @@ angular.module("wuziApp", []).controller("boardController" , function ($scope) {
 		var utility = 0;
 		var stack = new Array();
 		var nextAction;
-		
-
 
 		function init() {
 			var i;

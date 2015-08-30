@@ -115,7 +115,6 @@ angular.module("myApp", []).controller("pageController", function ($scope, $http
 	var cvs = document.getElementById("input");
 	var image = document.getElementById("image");
 	//var b1 = document.getElementById("b1");
-	
 	//var b2 = document.getElementById("b2");
 	//var b3 = document.getElementById("b3");
 	//var b4 = document.getElementById("b4");
@@ -406,6 +405,7 @@ angular.module("myApp", []).controller("pageController", function ($scope, $http
 
 	cvs.addEventListener('mousemove', function(e){
 		console.log(cvs);
+		e.preventDefault();
 		if (down === 1) {
 			endDraw(e, ctx, 1);
 			endDraw(e, ctx_img, ratio);
@@ -419,6 +419,7 @@ angular.module("myApp", []).controller("pageController", function ($scope, $http
 	});
 
 	cvs.addEventListener('touchmove', function(e){
+		e.preventDefault();
 		endDraw(e, ctx, 1);
 		endDraw(e, ctx_img, ratio);
 	});

@@ -31,6 +31,7 @@ html, body{
 .menuitem{
 	margin: 7px 15px;
 	display: inline-block;
+	position: relative;
 }
 
 .navleft{
@@ -466,3 +467,19 @@ html, body{
 .content{
 	display: block;
 }
+
+.arr{
+	position: absolute;
+	margin-top: -5px;
+	right: -10px;
+	top: 10px;
+	font-size: 0;
+	border-color: #666 transparent transparent;
+	border-style: solid dashed dashed;
+	border-width: 4px 4px 0;
+	transition: transform 0.2s ease-in;
+}
+
+.menuitem:hover .arr{
+	transform: rotate(180deg);
+};

@@ -13,11 +13,11 @@ salesImg[0].style["margin-left"] = mar.toString() + "px";
 salesImg[0].style["z-index"] = 2;
 salesImg[0].style["transition"] = "1s";
 salesImg[1].style["margin-left"] = mar.toString() + "px";
-salesImg[1].style["z-index"] = 1;
+salesImg[1].style["z-index"] = 0;
 salesImg[1].style["transition"] = "1s";
 //salesImg[1].style["opacity"] = "1";
 salesImg[2].style["margin-left"] = mar.toString() + "px";
-salesImg[2].style["z-index"] = 1;
+salesImg[2].style["z-index"] = 0;
 salesImg[2].style["transition"] = "1s";
 
 var salesBtn1 = document.getElementById("salesBtn1");
@@ -28,15 +28,15 @@ salesBtn2.addEventListener("mousedown", function() { changeImg(1) });
 salesBtn[0].addEventListener("mouseover", function() {
 	console.log(currentImg);
 	salesBtn[currentImg].style.background = "white";
-	changeImg(0, 0);
+	changeImg(currentImg, 0);
 	currentImg = 0;
 	salesBtn[0].style.background = "#d22147";
-	changeImg(1, currentImg);
+	//changeImg(1, currentImg);
 });
 salesBtn[1].addEventListener("mouseover", function() {
 	console.log(currentImg);
 	salesBtn[currentImg].style.background = "white";
-	changeImg(0, 1);
+	changeImg(currentImg, 1);
 	currentImg = 1;
 	salesBtn[1].style.background = "#d22147";
 	
@@ -44,11 +44,20 @@ salesBtn[1].addEventListener("mouseover", function() {
 salesBtn[2].addEventListener("mouseover", function() {
 	console.log(currentImg);
 	salesBtn[currentImg].style.background = "white";
-	changeImg(0, 2);
+	changeImg(currentImg, 2);
 	currentImg = 2;
 	salesBtn[2].style.background = "#d22147";
 	
 });
+/*for (var i = 0; i < salesBtn.length; i++) {
+	salesBtn[i].addEventListener("mouseover", function() {
+	console.log(currentImg);
+	salesBtn[currentImg].style.background = "white";
+	changeImg(0, i);
+	currentImg = i;
+	salesBtn[i].style.background = "#d22147";
+});
+};*/
 function changeImg(i,dest) {
 	console.log(dest);
 	salesBtn[currentImg].style.background = "white";

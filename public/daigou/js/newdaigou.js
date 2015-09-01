@@ -20,6 +20,81 @@ salesImg[2].style["margin-left"] = mar.toString() + "px";
 salesImg[2].style["z-index"] = 0;
 salesImg[2].style["transition"] = "1s";
 
+var loginwindow = document.querySelectorAll(".loginwindow");
+var cover = document.querySelectorAll(".cover");
+var cen = (windowWidth - 480) / 2; 
+loginwindow[0].style["margin-left"] = cen.toString() + "px";
+document.getElementById("closeloginwindow").onclick = function() {
+	console.log(loginwindow[0]);
+	loginwindow[0].style.transform = "scale(0.5)";
+	setTimeout(function() {
+		loginwindow[0].style["z-index"] = "-1";
+		cover[0].style["z-index"] = "-1";
+	}, 200);
+};
+
+var statebarbtn = document.querySelectorAll(".statebar a");
+for (var i = 0; i < statebarbtn.length; i++) {
+	statebarbtn[i].onclick = function() {
+		loginwindow[0].style.transform = "scale(0.5)";
+		loginwindow[0].style.transform = "scale(1)";
+		loginwindow[0].style["z-index"] = "101";
+		cover[0].style["z-index"] = "100";
+	};
+};
+
+var imgs = [
+	"onlineidtvumov12090.jpg", 
+	"onlinei9jmaorh11532.jpg",
+	"onlineidppw04o12891.jpg",
+	"onlineidwq8ahx10696.jpg",
+	"onlineiaxs5zvu10655.jpg"
+];
+
+var newItems = [
+	{
+		"img":"onlineidtvumov12090.jpg",
+		"des":"Avene 雅漾 清爽洁肤凝胶 200毫升",
+		"price":100,
+		"oldprice":195
+	},
+	{
+		"img":"onlinei9jmaorh11532.jpg",
+		"des":"2件组合装 | SKINFOOD 思亲肤 黑糖魔法去角质洗面奶 160",
+		"price":105,
+		"oldprice":193
+	},
+	{
+		"img":"onlineidppw04o12891.jpg",
+		"des":"Puritan's Pride 普丽普莱 双倍葡萄籽精华胶囊 100粒*2瓶",
+		"price":101,
+		"oldprice":194
+	},
+	{
+		"img":"onlineidwq8ahx10696.jpg",
+		"des":"Rapunzel 长发公主 宝宝有机全麦细面 250克",
+		"price":102,
+		"oldprice":196
+	},
+	{
+		"img":"onlineiaxs5zvu10655.jpg",
+		"des":"COACH 蔻驰 女式单肩斜挎包 蛇皮纹 F35555-IMNAT",
+		"price":103,
+		"oldprice":197
+	},
+];
+var newItemImage = document.querySelectorAll(".newItemImg");
+var newItemTextDes = document.querySelectorAll(".newItemText .des");
+console.log(newItemTextDes);
+var newItemPrice = document.querySelectorAll(".newItemText .newItemPrice");
+var newItemOldPrice = document.querySelectorAll(".newItemText .newItemOldPrice");
+for (i = 0; i < newItemImage.length; i++) {
+	newItemImage[i].style["background-image"] = "url(img/"+newItems[i].img+")";
+	newItemTextDes[i].innerText = newItems[i].des;
+	newItemPrice[i].innerText = newItems[i].price;
+	newItemOldPrice[i].innerText = newItems[i].oldprice;
+}
+console.log(statebarbtn);
 var salesBtn1 = document.getElementById("salesBtn1");
 salesBtn1.addEventListener("mousedown", function() { changeImg(-1) });
 

@@ -2,12 +2,11 @@ html, body{
 	background-color: #f2f2f2;
 	margin: 0;
 	padding: 0;
-
+	position: relative;
 }
 
 .container{
 	width: 960px;
-	height: 100%;
 	margin: 0 auto;
 }
 
@@ -480,6 +479,134 @@ html, body{
 	transition: transform 0.2s ease-in;
 }
 
-.menuitem:hover .arr{
+.center:hover .arr{
 	transform: rotate(180deg);
-};
+	cursor: pointer;
+}
+
+.center1:hover .arr{
+	transform: rotate(180deg);
+	cursor: pointer;
+}
+
+.cover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: grey;
+	opacity: 0.6;
+	z-index: -1;
+}
+
+.loginwindow{
+	position: absolute;
+	width: 340px;
+	height: 340px;
+	margin: 200px 200px;
+	background-color: white;
+	opacity: 1;
+	padding: 30px;
+	transition: transform 0.2s ease-in;
+	transform: scale(0.5);
+	z-index: -1;
+}
+
+.loginwindow input{
+	width: 320px;
+	height: 27px;
+	margin: 5px;
+	padding: 5px;
+}
+
+.loginwindow p{
+	display: inline-block;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.loginbtn{
+	display: block;
+	background-color: #d22147;
+	text-align: center;
+	float: left;
+	width: 340px;
+	height: 40px;
+	color: white;
+	margin-bottom: 10px;
+	
+}
+
+.loginbtn:hover {
+	background-color: #f23147;
+}
+
+#closeloginwindow{
+	cursor: pointer;
+}
+
+.newItem{
+	width: 190px;
+	height: 300px;
+	background-color: white;
+	margin-right: 1px;
+	display: inline-block;
+	float: left;
+}
+
+.newItemImg{
+	width: 190px;
+	height: 190px;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	background-image: url(../img/onlineidtvumov12090.jpg);
+}
+
+.newItemText p{
+	font-size: 12px;
+	margin: 5px;
+}
+
+.newItemText .des{
+	height: 50px;
+	font-size: 14px;
+}
+.newItemTextPrice{
+	color: #f23147;
+}
+
+.newItemTextOldprice{
+	color: #666;
+}
+
+.titleFrame{
+	margin: 20px 0;
+}
+.title{
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 700;
+}
+.subtitle{
+	display: inline-block;
+	font-size: 18px;
+	color: #333;
+}
+
+.iconNewItem{
+	width: 32px;
+	height: 36px;
+	position: absolute;
+	background-image: url(../img/icon1_7160ebf.png);
+	background-position: -179px -494px;
+	margin-left: 10px;
+	font-size: 12px;
+	color: white;
+}
+
+.newItemPrice{
+	font-size: 24px;
+	font-weight: 700;
+}

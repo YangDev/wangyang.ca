@@ -756,3 +756,19 @@ html, body{
 .icon8{
 	background-position: -935px -1px;
 }
+
+.iconcart{
+	padding-left: 26px;
+	display: inline-block;
+	background-image: url(../img/icon1_7160ebf.png);
+	background-position: -955px -70px;
+}
+.iconSearch{
+	margin-top: 7px;
+	margin-left: 5px;
+	float: left;
+	width: 14px;
+	height: 14px;
+	background-position: -466px -667px;
+	background-image: url(../img/icon1_7160ebf.png);
+}

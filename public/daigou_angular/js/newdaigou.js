@@ -20,10 +20,10 @@ salesImg[2].style["margin-left"] = mar.toString() + "px";
 salesImg[2].style["z-index"] = 0;
 salesImg[2].style["transition"] = "1s";
 
+/*
 var loginwindow = document.querySelectorAll(".loginwindow");
 var cover = document.querySelectorAll(".cover");
 var cen = (windowWidth - 480) / 2; 
-loginwindow[0].style["margin-left"] = cen.toString() + "px";
 document.getElementById("closeloginwindow").onclick = function() {
 	loginwindow[0].style.transform = "scale(0.5)";
 	setTimeout(function() {
@@ -67,7 +67,7 @@ statebarbtn[1].onclick = function() {
 		loginwindow[1].style.transform = "scale(1)";
 		loginwindow[1].style["z-index"] = "101";
 		cover[0].style["z-index"] = "100";
-};
+};*/
 
 var imgs = [
 	"onlineidtvumov12090.jpg", 
@@ -114,7 +114,7 @@ var newItemTextDes = document.querySelectorAll(".newItemText .des");
 //console.log(newItemTextDes);
 var newItemPrice = document.querySelectorAll(".newItemText .newItemPrice");
 var newItemOldPrice = document.querySelectorAll(".newItemText .newItemOldPrice");
-for (i = 0; i < newItemImage.length; i++) {
+for (var i = 0; i < newItemImage.length; i++) {
 	newItemImage[i].style["background-image"] = "url(img/"+newItems[i].img+")";
 	newItemTextDes[i].innerText = newItems[i].des;
 	newItemPrice[i].innerText = newItems[i].price;
@@ -182,6 +182,7 @@ function changeImg(i,dest) {
 	salesBtn[currentImg].style.background = "#d22147";
 };
 
+/*
 var states = ["UNSENT", "OPENDED", "HEADERS_RECEIVED", "LOADING", "DONE"];
 var xhr = new XMLHttpRequest();
 var err = document.createElement("div");
@@ -241,6 +242,6 @@ loginBtn[1].onclick = function() {
 	userpass2.disabled = true;
 	userpass1.disabled = true;
 	console.log(useremail.value, userpass1.value, userpass2.value);
-};
+};*/
 
 

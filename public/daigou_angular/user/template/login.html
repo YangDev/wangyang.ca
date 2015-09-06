@@ -1,0 +1,16 @@
+<div class="loginwindow">
+	<div>
+		<p class="left">登录邮箱帐号</p>
+		<p class="right" id="closeloginwindow" ng-click="closeLoginWindow()">X</p>
+	</div>
+	<input placeholder="邮箱地址" ng-model="user.email">
+	<input placeholder="密码" ng-model="user.pass">
+	<div>
+		<p class="left">两周内自动登录</p>
+		<p class="right">忘记密码？</p>
+	</div>
+	<div>
+		<div class="loginbtn" ng-click="login(user)">登录</div>
+	</div>
+	<div class="left" id="register" ng-click="closeLoginWindowAndShowRegisterWindow()">立即免费注册！</div>
+</div>

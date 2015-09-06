@@ -1,0 +1,10 @@
+<div class="loginwindow">
+	<div>
+		<p class="left">邮箱帐号注册</p>
+		<p class="right" id="closeregisterwindow" ng-click="closeRegisterWindow()">X</p>
+	</div>
+	<input placeholder="常用邮箱地址" ng-model="userReg.email">
+	<input placeholder="设置密码" ng-model="userReg.pass1">
+	<input placeholder="确认密码" ng-model="userReg.pass2">
+	<div class="loginbtn" style="background:#69b3f2; margin-top:20px;" ng-click="register(userReg)">立即注册</div>
+</div>

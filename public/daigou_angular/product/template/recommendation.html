@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="newItem" ng-repeat="item in newItems">
+		<span class="iconNewItem">新品</span>
+		<div class="newItemImg" style="background-image:url(img/{{item.img}})"></div>
+		<div class="newItemText">
+			<p class="des">{{item.des}}</p>
+			<p class="newItemTextPrice">包邮价 ¥<span class="newItemPrice">{{item.price}}</span></p>
+			<p class="newItemTextOldprice">国内参考价 ¥<span class="newItemOldPrice">{{item.oldprice}}</span></p>
+		</div>
+	</div>
+</div>

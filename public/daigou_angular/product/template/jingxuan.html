@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="jingxuan" ng-repeat="item in jingxuanItems track by $index">
+		<div class="jingxuanImg" style="background-image:url(img/{{item.img}})"></div>
+		<div class="jingxuanFrame">
+		<div class="jingxuanText1">
+			<img src="img/holland.png">荷兰直供 杭州保税仓发货
+		</div>
+		<div class="jingxuanText2">{{item.des1}}</div>
+		<div class="jingxuanText3">{{item.des2}}</div>
+		<div class="jingxuanText6">
+			<div class="jingxuanText4">包邮价¥
+				<span class="jingxuanPrice">{{item.price}}</span>
+				<span class="iconZhe">{{getZhekou($index)}}折</span>
+			</div>
+			<div class="jingxuanText5">国内参考价 ¥{{item.oldprice}}</div>
+		</div>
+		<div class="jingxuanText7"></div>
+		</div>
+	</div>
+</div>

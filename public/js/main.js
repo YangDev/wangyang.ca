@@ -6,6 +6,8 @@ strings.cn = [
 	"代购网站 (更新: 2015-06-15)", 
 	"代购网站.新 (更新: 2015-08-30)",
 	"代购网站（手机版） (更新: 2015-07-29)",
+	"代购网站.新 (更新: 2015-08-30)(angular)",
+	"代购网站（手机版） (更新: 2015-07-29)(angular)",
 	"计时器 (更新: 2015-07-25)",
 	"个人网站（旧） (更新: 2015-03-29)",
 	"邮箱"
@@ -17,6 +19,8 @@ strings.en = [
 	"Online Store (update: 2015-06-15)", 
 	"New Online Store (update: 2015-08-30)",
 	"New Online Store(mobile version) (update: 2015-07-29)",
+	"New Online Store (update: 2015-08-30)(angular)",
+	"New Online Store(mobile version) (update: 2015-07-29)(angular)",
 	"Timer (update: 2015-07-25)",
 	"Personal WebSite (update: 2015-03-29)",
 	"Email"

@@ -1,10 +1,16 @@
 <div class="sales" id="s3">
 	<div class="salesframe" id="s2">
-		<a href=""><img src="img/id1p1oi351.jpg" class="salesimg"></a>
-		<a href=""><img src="img/id1mwe4e87.jpg" class="salesimg"></a>
-		<a href=""><img src="img/id5b2mpg95.jpg" class="salesimg"></a>
-		<div id="salesBtn1"><p>〈</p></div>
-		<div id="salesBtn2"><p>〉</p></div>
-		<div id="salesBtn3"><div></div><div></div><div></div></div>
+		<a href="" class="salesimg"><img src={{salesImg[0]}}></a>
+		<a href="" class="salesimg"><img src={{salesImg[1]}}></a>
+		<a href="" class="salesimg"><img src={{salesImg[2]}}></a>
+		<a href="" class="salesimg"><img src={{salesImg[3]}}></a>
+		<div id="salesBtn1" ng-click="changeImg(-1)"><p>〈</p></div>
+		<div id="salesBtn2" ng-click="changeImg(1)"><p>〉</p></div>
+		<div id="salesBtn3">
+			<div ng-mouseover="changeImgTo(0)"></div>
+			<div ng-mouseover="changeImgTo(1)"></div>
+			<div ng-mouseover="changeImgTo(2)"></div>
+			<div ng-mouseover="changeImgTo(3)"></div>
+		</div>
 	</div>
 </div>

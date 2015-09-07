@@ -1,5 +1,3 @@
-
-
 var r = document.getElementById("r");
 var menubar = document.querySelectorAll(".menubar");
 var salesimg = document.querySelectorAll(".sales img");

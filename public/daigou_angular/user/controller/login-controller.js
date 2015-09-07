@@ -15,7 +15,9 @@ angular.module('app')
 				});
 		};
 		$scope.showLoginWindow = function () {
+			//loginwindow[0].style['-webkit-transform'] = "scale(0.5)";
 			loginwindow[0].style.transform = "scale(0.5)";
+			//loginwindow[0].style["-webkit-transform"] = "scale(1)";
 			loginwindow[0].style.transform = "scale(1)";
 			loginwindow[0].style["z-index"] = "101";
 			$scope.showCover();
@@ -43,5 +45,5 @@ angular.module('app')
 				'showLoginWindow()' :"&"
 			},*/
 			controller: 'login',
-			templateUrl: 'user/template/login.html'
+			templateUrl: '/daigou_angular/user/template/login.html'
 		}});

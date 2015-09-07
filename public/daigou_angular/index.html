@@ -4,7 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style4.css">
 	<script src="/js/lib/angular.js"></script>
-	
+	<script src="/js/lib/angular-route.min.js"></script>
 </head>
 <body ng-controller="pageController">
 	<cover></cover>
@@ -21,81 +21,9 @@
 		</div>
 	</div>
 	<menubar></menubar>
-<div class="sales" id="s3">
-	<div class="salesframe" id="s2">
-		<a href=""><img src="img/id1p1oi351.jpg" class="salesimg"></a>
-		<a href=""><img src="img/id1mwe4e87.jpg" class="salesimg"></a>
-		<a href=""><img src="img/id5b2mpg95.jpg" class="salesimg"></a>
-		<div id="salesBtn1"><p>〈</p></div>
-		<div id="salesBtn2"><p>〉</p></div>
-		<div id="salesBtn3"><div></div><div></div><div></div></div>
-	</div>
-</div>
-<div class="sloganframe" style="margin-top: 20px;height:50px;">
-	<div class="slogan">
-		<div class="icon icon1"></div>
-		<div class="slogantext1">XX自营</div>
-		<div class="slogantext2">海外直采 100%确保正品</div>
-	</div>
-	<div  class="slogan">
-		<div class="icon  icon2"></div>
-		<div class="slogantext1">低价保障</div>
-		<div class="slogantext2">缩减中间环节 确保低价</div>
-	</div>
-	<div  class="slogan">
-		<div class="icon  icon3"></div>
-		<div class="slogantext1">闪电发货</div>
-		<div class="slogantext2">电子清关 极速发货</div>
-	</div>
-	<div  class="slogan">
-		<div class="icon  icon4"></div>
-		<div class="slogantext1">全场包邮</div>
-		<div class="slogantext2">网易补贴 全球尖货0运费</div>
-	</div>
-</div>
 
-<div class="container">
-	<div class="titleFrame">
-	<div class="title">每日推荐/</div>
-	<div class="subtitle">新品推荐</div>
-	</div>
-</div>
-<recommendation></recommendation>
+	<div ng-view></div>
 
-
-<div class="container">
-	<div class="titleFrame">
-	<div class="title">全球精选/</div>
-	<div class="subtitle">为你精挑细选</div>
-	</div>
-</div>
-
-<jingxuan></jingxuan>
-
-<div class="frame">
-	<div class="sloganframe" style="margin-top: 20px;height:50px;">
-		<div class="slogan">
-			<div class="icona icon5"></div>
-			<div class="slogantext3">100%自营正品</div>
-			<div class="slogantext">XX自营 正品保障</div>
-		</div>
-		<div  class="slogan">
-			<div class="icona  icon6"></div>
-			<div class="slogantext3">100%海外精选</div>
-			<div class="slogantext">全球尖货 一站选购</div>
-		</div>
-		<div  class="slogan">
-			<div class="icona  icon7"></div>
-			<div class="slogantext3">7天无忧退货</div>
-			<div class="slogantext">国内退货 售后无忧</div>
-		</div>
-		<div  class="slogan">
-			<div class="icona  icon8"></div>
-			<div class="slogantext3">全新海淘模式</div>
-			<div class="slogantext">极速清关 政府监管</div>
-		</div>
-	</div>
-</div>
 
 <div class="frame1">
 	<div class="container">
@@ -104,7 +32,7 @@
 	</div>
 </div>
 
-	<script type="text/javascript" src="js/newdaigou.js"></script>
+	<script src="js/route.js"></script>
 	<script src="js/page-controller.js"></script>
 	<script src="user/controller/login-controller.js"></script>
 	<script src="user/controller/register-controller.js"></script>
@@ -113,6 +41,7 @@
 	<script src="product/controller/menubar-controller.js"></script>
 	<script src="product/controller/searchbar-controller.js"></script>
 	<script src="product/controller/recommendation-controller.js"></script>
+	<script src="product/controller/sales-controller.js"></script>
 	<script src="product/controller/jingxuan-controller.js"></script>
 </body>
 </html>

@@ -106,9 +106,10 @@
 *************** header ******************
 */
 .header {
+  width: 100%;
   height: 100px;
   padding: 0;
-  background: #fff; }
+  background: white; }
 
 .logo {
   background-image: url("/daigou/img/logo_kaola.png");
@@ -232,7 +233,7 @@
 
 /******************************** jing xuan ***************************/
 .jingxuan {
-  width: 470px;
+  width: 520px;
   height: 530px;
   background-color: white;
   display: inline-block;
@@ -373,14 +374,15 @@
   display: inline-block; }
 
 .salesimg img {
-  display: inline-block;
-  float: left;
-  text-align: center;
-  float: left;
   position: absolute;
-  left: 0;
-  top: 0;
-  transition: 0.0s; }
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 1s; }
 
 .salesframe {
   width: 100%;
@@ -449,12 +451,12 @@
 *************** slogan *********************
 */
 .sloganframe {
-  width: 960px;
+  width: 1060px;
   height: 100%;
   margin: 0 auto; }
 
 .slogan {
-  width: 220px;
+  width: 245px;
   height: 40px;
   display: inline-block;
   margin-left: 20px;
@@ -576,7 +578,7 @@
 
 /******************************* new item *********************************/
 .newItem {
-  width: 190px;
+  width: 210px;
   height: 300px;
   background-color: white;
   margin-right: 1px;
@@ -631,7 +633,7 @@
 /********************** detail ******************/
 .detailImg {
   width: 400px;
-  height: 400px;
+  height: 600px;
   display: inline-block;
   float: left;
   border: 1px solid #eee; }
@@ -641,20 +643,147 @@
   height: 400px; }
 
 .detailDes {
-  width: 540px;
-  height: 400px;
+  width: 620px;
+  height: 600px;
   display: inline-block;
   float: right; }
+
+.detailDes hr {
+  border: 1px dotted #eee; }
+
+.detailText1 {
+  color: #999;
+  font-weight: 400; }
+
+.detailText1 img {
+  height: 28px;
+  width: 28px; }
+
+.detailText2 {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px; }
+
+.detailText3 {
+  margin-top: 5px;
+  color: #333;
+  line-height: 25px;
+  font-size: 16px;
+  height: 75px; }
+
+.detailText4 {
+  margin-top: 15px; }
+
+.detailText5 {
+  margin-top: 15px; }
+
+.detailText6 {
+  height: 30px; }
+
+.detailText7 {
+  margin-top: 15px;
+  height: 50px; }
+
+.detailSub {
+  width: 75px;
+  color: #666;
+  font-size: 14px;
+  margin-right: 40px; }
+
+.detailPrice {
+  font-size: 30px;
+  color: #d22147;
+  font-weight: 700; }
+
+.detailPromote {
+  margin-left: 5px;
+  background: #f68587;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 5px;
+  color: white;
+  vertical-align: 7px;
+  border-radius: 2px; }
+
+.detailOldPrice {
+  color: #999;
+  margin-left: 15px; }
+
+.btn, .btnBuy, .btnAddToCart {
+  width: auto;
+  border: 2px solid #d22147;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  margin-right: 20px; }
+
+.btnBuy {
+  color: #d22147;
+  background: #ffeced; }
+
+.btnAddToCart {
+  color: white;
+  background: #d22147; }
+
+.detailMore {
+  margin-top: 20px;
+  width: 178px;
+  background: green;
+  display: inline-block;
+  float: left; }
+
+.detailInfo {
+  margin-top: 20px;
+  width: 850px;
+  display: inline-block;
+  float: right; }
+
+.detailInfo img {
+  width: 850px; }
+
+.oldSuggestionPrice {
+  color: #999;
+  text-decoration: line-through; }
+
+.newSuggestionPrice {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f23147; }
+
+.pingjia {
+  color: #999;
+  padding: 0 15px; }
+
+.suggestionFrame {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  margin-right: 10px;
+  display: inline-block;
+  float: left;
+  border: 1px solid #eee; }
+
+.suggestionDes {
+  height: 40px;
+  font-size: 14px;
+  padding: 0 15px;
+  margin-bottom: 9px;
+  line-height: 20px;
+  text-decoration: none; }
 
 html, body {
   background-color: #f2f2f2;
   margin: 0;
   padding: 0;
   position: relative;
+  width: 100%;
   height: 100%; }
 
 .container {
-  width: 960px;
+  width: 1060px;
   margin: 0 auto; }
 
 .content {

@@ -47,7 +47,7 @@ salescontainer[0].addEventListener("touchend", function(e) {
 		salesCurrentShow = 1;
 		swapSlide();
 	}
-	interval = setInterval(slideRight, 3000);;
+	interval = setInterval(slideRight, 3000);
 });
 
 function swapSlide() {

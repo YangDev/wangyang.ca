@@ -1,0 +1,13 @@
+<div class="suggestionFrame" ng-repeat="item in newItems">
+	<a href="#detail">
+		<div class="newItemImg" style="background-image:url(img/{{item.img}})"></div>
+	</a>
+	<div class="newItemText">
+		<a href="#detail" style="text-decoration:none;"><p class="suggestionDes">{{item.des}}</p></a>
+		<p style="padding:0 15px;">
+			<span class="newSuggestionPrice">¥{{item.price}}</span>
+			<span class="oldSuggestionPrice">¥{{item.oldprice}}</span>
+		</p>
+		<p class="pingjia">{{item.oldprice}}人已评价</p>
+	</div>
+</div>

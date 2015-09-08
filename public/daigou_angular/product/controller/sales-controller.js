@@ -47,38 +47,40 @@ angular.module('app')
 
 		$scope.salesImg = salesImgs[Number($scope.params.pageID)];
 
-		var windowWidth = Math.max(window.innerWidth, 960);
-		var mar = - (1920 - windowWidth) / 2;
 		var salesImg = document.querySelectorAll(".salesimg img");
 		var salesBtn = document.querySelectorAll("#salesBtn3 div");
 		var currentImg = 0;
 		var imgLength = salesImg.length;
 
-		salesImg[0].style["margin-left"] = mar.toString() + "px";
 		salesImg[0].style["z-index"] = 2;
-		salesImg[0].style["transition"] = "1s";
-		salesImg[1].style["margin-left"] = mar.toString() + "px";
-		salesImg[1].style["z-index"] = 0;
-		salesImg[1].style["transition"] = "1s";
-		salesImg[2].style["margin-left"] = mar.toString() + "px";
-		salesImg[2].style["z-index"] = 0;
-		salesImg[2].style["transition"] = "1s";
-		salesImg[3].style["margin-left"] = mar.toString() + "px";
-		salesImg[3].style["z-index"] = 0;
-		salesImg[3].style["transition"] = "1s";
+		salesBtn[currentImg].style.background = "#d22147";
 
-		$scope.changeImgTo = changeImgTo;
-		$scope.changeImg = changeImg;
+		var interval = setInterval(function () {
+			changeImg(1);
+		}, 3000);
+
+		$scope.changeImgTo = function (i) {
+			clearInterval(interval);
+			changeImgTo(i);
+			interval = setInterval(function () {
+				changeImg(1);
+			}, 3000);
+		};
+
+		$scope.changeImg = function (i) {
+			clearInterval(interval);
+			changeImg(i);
+			interval = setInterval(function () {
+				changeImg(1);
+			}, 3000);
+		}
 
 		function changeImgTo (i) {
 			changeImg(currentImg, i);
 			currentImg = i;
 		}
 		function changeImg (i,dest) {
-			//console.log(dest);
-			//$event.preventDefault();
 			salesBtn[currentImg].style.background = "white";
-			salesImg[currentImg].style["transition"] = "1s";
 			salesImg[currentImg].style["z-index"] = 1;
 			salesImg[currentImg].style["opacity"] = 0;
 			if (dest != undefined) {
@@ -92,7 +94,6 @@ angular.module('app')
 			if (currentImg < 0) {
 				currentImg = imgLength - 1;
 			}
-			salesImg[currentImg].style["transition"] = "1s";
 			salesImg[currentImg].style["opacity"] = 1;
 			salesImg[currentImg].style["z-index"] = 2;
 			salesBtn[currentImg].style.background = "#d22147";

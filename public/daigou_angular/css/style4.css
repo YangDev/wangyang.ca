@@ -106,7 +106,6 @@
 *************** header ******************
 */
 .header {
-  width: 100%;
   height: 100px;
   padding: 0;
   background: white; }
@@ -126,6 +125,8 @@
   margin-top: 0;
   position: relative;
   float: left; }
+.header .container {
+  background: white; }
 
 .search {
   display: inline-block;
@@ -365,7 +366,7 @@
 ********************* sales ***********************
 */
 .sales {
-  width: 100%;
+  width: auto;
   height: 400px; }
 
 .sales :hover #salesBtn1 {
@@ -451,7 +452,7 @@
 *************** slogan *********************
 */
 .sloganframe {
-  width: 1060px;
+  width: 1090px;
   height: 100%;
   margin: 0 auto; }
 
@@ -737,12 +738,9 @@
 
 .detailInfo {
   margin-top: 20px;
-  width: 850px;
+  width: 890px;
   display: inline-block;
   float: right; }
-
-.detailInfo img {
-  width: 850px; }
 
 .oldSuggestionPrice {
   color: #999;
@@ -783,10 +781,33 @@ html, body {
   height: 100%; }
 
 .container {
-  width: 1060px;
+  width: 1090px;
+  height: 100%;
   margin: 0 auto; }
 
 .content {
   display: block; }
+
+.frame {
+  float: left;
+  width: 100%;
+  height: 80px;
+  background-color: white; }
+
+.frame .container {
+  background-color: white; }
+
+.frame1 {
+  float: left;
+  width: 100%;
+  height: 150px;
+  background-color: #333; }
+
+.frame1 p {
+  margin-top: 40px;
+  text-align: center;
+  color: white; }
+.frame1 .container {
+  background-color: #333; }
 
 /*# sourceMappingURL=style4.css.map */

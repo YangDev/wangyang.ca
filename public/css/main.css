@@ -1,24 +1,22 @@
+.lang img {
+  margin-right: 10px; }
 
-.lang img{
-	margin-right: 10px;
-}
-.lang div{
-	width: 60px;
-	height: 50px;
-	display: inline-block;
-	cursor: pointer;
-}
+.lang div {
+  width: 60px;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer; }
 
-p{
-	display: inline-block;
-}
+p {
+  display: inline-block; }
 
-a{
-	text-decoration: none;
-}
-a:hover{
-	text-decoration: underline;
-}
-.new{
-	color: red;
-}
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.new {
+  color: red; }
+
+/*# sourceMappingURL=main.css.map */

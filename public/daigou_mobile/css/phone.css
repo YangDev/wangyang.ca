@@ -1,0 +1,266 @@
+/*
+************************ state bar *******************************
+*/
+.statebar{
+	width: 100%;
+	height: 40px;
+	background-color: #d22147;
+	position: relative;
+	color: white;
+}
+.m{
+	position: absolute;
+	width: 100px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	margin-top: 7px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.l{
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+.ll{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/back_5da4a08.png);
+	background-repeat: no-repeat;
+}
+.l:hover{
+	cursor: pointer;
+}
+#r{
+	background-image: url(../img/icon2.png);
+	background-size: 500px;
+	background-position: -399px -462px;
+	width: 40px;
+	height: 40px;
+	float: right;
+	display: inline-block;
+}
+
+#r:hover{
+	cursor: pointer;
+}
+
+
+/*
+***************************** menu bar ***************************
+*/
+.menubar{
+	height: 0px;
+	width: 100%;
+	background-color: #f3f3f3;
+	transition: 0.2s;
+	z-index: -1;
+	position: relative;
+}
+.menubarbtn{
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	font-size: 12px;
+	z-index: 0;
+}
+
+#icon1{
+	display: inline-block;
+	width: 32px;
+	height: 40px;
+	background-image: url("../img/icon2.png");
+	background-position: -214px -505px;
+	background-size: 500px;
+	position: relative;
+
+}
+#icon2{
+	display: inline-block;
+	width: 32px;
+	height: 40px;
+	background-image: url("../img/icon2.png");
+	background-position: -295px -505px;
+	background-size: 500px;
+
+}
+#icon3{
+	display: inline-block;
+	width: 42px;
+	height: 40px;
+	background-image: url("../img/icon2.png");
+	background-position: -368px -505px;
+	background-size: 500px;
+
+}
+#icon4{
+	display: inline-block;
+	width: 50px;
+	height: 40px;
+	background-image: url("../img/icon2.png");
+	background-position: -445px -505px;
+	background-size: 500px;
+}
+.header{
+	display: none;
+}
+
+.sales{
+	width: 100%;
+	height: auto;
+	background-color: green;
+	position: relative;
+}
+
+.sales img{
+	width: 640px;
+	height: auto;
+	display: inline-block;
+	float: left;
+}
+#img1{
+}
+.container{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.container1{
+	width: 3200px;
+	height: auto;
+	margin-left: 0px;
+	transition: 0.0s;
+}
+.sloganframe{
+	display: none;
+}
+.slogan img{
+	width: 100%;
+	margin-top: 7px;
+	float: left;
+}
+.ad img{
+	width: 33%;
+	margin-top: 7px;
+	float: left;
+}
+
+.icon5{
+	height: 15px;
+	width: 4px;
+	display: inline-block;
+	margin: 0 6px 0 0;
+	background-position: -54px -236px;
+	background-image: url("../img/icon11.png");
+}
+
+.itembar{
+	margin-top: 7px;
+	width: 100%;
+	height: 20px;
+	float: left;
+	background-color: white;
+}
+html, body{
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 0;
+}
+
+
+.view-container{
+	position:relative;
+	
+}
+
+.view-animate-container {
+  position:relative;
+  overflow:hidden;
+}
+
+.view-animate {
+}
+
+.detail{
+	background-color: white;
+}
+.detail.ng-enter, .detail.ng-leave {
+  transition: 0.5s;
+  display:block;
+  width:100%;
+  position:absolute;
+
+}
+
+.detail.ng-enter {
+  left:100%;
+  z-index: 10;
+}
+.detail.ng-enter.ng-enter-active {
+  left:0;
+}
+.detail.ng-leave {
+	z-index: 10;
+  left:0;
+}
+.detail.ng-leave.ng-leave-active {
+
+  left:100%;
+}
+
+.policyTitle{
+	font-size: 28px;
+	color: #d22147;
+	font-weight: 400;
+}
+
+.policySubtitle{
+	font-size: 18px;
+	font-weight: 500;
+	color: #999;
+}
+
+.policyText{
+	font-size: 24px;
+	color: #333;
+	word-break: break-all;
+	display: block;
+	width: 100%;
+}
+
+.policyImg1{
+	display: inline-block;
+	width: 120px;
+	height: 170px;
+	background: url(../img/publicity.jpg) no-repeat #fff;
+	background-position: -0px -1010px;
+	text-align: center;
+	color: #333;
+}
+.policyImg2{
+	position: absolute;
+	display: inline-block;
+	width: 120px;
+	height: 170px;
+	background: url(../img/publicity.jpg) no-repeat #fff;
+	background-position: -0px -1010px;
+	text-align: center;
+	color: #333;
+	left: 40%;
+}
+.policyImg3{
+	position: absolute;
+	display: inline-block;
+	width: 120px;
+	height: 170px;
+	background: url(../img/publicity.jpg) no-repeat #fff;
+	background-position: -0px -1010px;
+	text-align: center;
+	color: #333;
+	right: 0;
+}

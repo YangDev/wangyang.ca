@@ -19,8 +19,8 @@ strings.en = [
 	"Online Store (update: 2015-06-15)", 
 	"New Online Store (update: 2015-08-30)",
 	"New Online Store(mobile version) (update: 2015-07-29)",
-	"New Online Store (update: 2015-08-30)(angular)",
-	"New Online Store(mobile version) (update: 2015-07-29)(angular)",
+	"New Online Store (update: 2015-09-08)(angular)",
+	"New Online Store(mobile version) (update: 2015-09-09)(angular)",
 	"Timer (update: 2015-07-25)",
 	"Personal WebSite (update: 2015-03-29)",
 	"Email"

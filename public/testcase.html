@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			width: 100%;
+			overflow: hidden;
+		}
+		video{
+			display: block;
+		}
+		p, h1{
+			font-family: Arial, Helvetica, sans-serif;
+			color: #232323;
+			font-weight: normal;
+		}
+		#p1{
+			position: absolute;
+			text-align: center;
+			top: 470px;
+			font-size: 30px;
+			transition:0.5s;
+			opacity: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		#t1{
+			position: absolute;
+			top: 420px;
+			text-align: center;
+			transition:0.5s;
+			opacity: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		#t2{
+			width: 400px;
+			top: 200px;
+			transition:0.5s;
+			position: absolute;
+			right: 100%;
+		}
+		#p2{
+			width: 422px;
+			top: 250px;
+			display: inline-block;
+			transition:0.5s;
+			position: absolute;
+			left: 100%;
+			word-break: keep-all;
+			font-size: 30px;
+		}
+		.container{
+			width: 1000px;
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button onclick="play()">play</button>
+		<button onclick="pause()">pause</button>
+		<video width="100%" height="100%">
+			<source src="source.mp4" type="video/mp4">
+		</video>
+		<h1 id="t1">LOREM IPSUM DOLOR</h1>
+		<p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+		<h1 id="t2">LOREM IPSUM DOLOR</h1>
+		<p id="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+	</div>
+	<script type="text/javascript">
+		var video = document.getElementsByTagName('video');
+		var p1 = document.getElementById('p1');
+		var t1 = document.getElementById('t1');
+		var p2 = document.getElementById('p2');
+		var t2 = document.getElementById('t2');
+		var v = video[0];
+		var mid = false;
+		setInterval(function() {
+			if (v.currentTime > 2.55 && v.currentTime < 2.62) {
+				v.pause();
+				if (mid == false) {
+					t2.style.right = "52%";
+					p2.style.left = "60%";
+					setTimeout(function () {
+						t2.style.opacity = "0";
+						p2.style.opacity = "0";
+						setTimeout(function () {
+							t2.style.right = "100%";
+							p2.style.left = "100%";
+						}, 1000);
+						v.play();
+					}, 1500);
+					mid = true;
+				}
+				//v.play();
+			}
+		}, 50);
+		
+		v.addEventListener('timeupdate', function (e) {
+			if (v.currentTime > 5) {
+				t1.style.opacity = "1";
+				setTimeout(function () {
+					p1.style.opacity = "1";
+				}, 500);
+				setTimeout(function () {
+					t1.style.opacity = "0";
+					p1.style.opacity = "0";
+				}, 1500);
+			}
+		});
+
+		function play() {
+			if (v.ended) {
+				v.currentTime = 0;;
+				mid = false;
+				t2.style.opacity = "1";
+				t2.style.right = "100%";
+				p2.style.opacity = "1";
+				p2.style.left = "100%";
+			}
+			if (v.currentTime == 0) {
+				t1.style.opacity = "1";
+				setTimeout(function () {
+					p1.style.opacity = "1";
+				}, 500);
+				setTimeout(function () {
+					t1.style.opacity = "0";
+					p1.style.opacity = "0";
+					v.play();
+				}, 1500);
+			} else {
+				v.play();
+			}
+		}
+
+		function pause() {
+			v.pause();
+		}
+	</script>
+</body>
+</html>
